@@ -1,42 +1,42 @@
 import { Code, Palette, Smartphone, Globe } from "lucide-react";
-
-const services = [
-  {
-    icon: Code,
-    title: "Web Development",
-    description: "Creating responsive and performant web applications using modern technologies.",
-  },
-  {
-    icon: Smartphone,
-    title: "App Development",
-    description: "Building cross-platform mobile applications with native performance.",
-  },
-  {
-    icon: Palette,
-    title: "UI/UX Design",
-    description: "Designing intuitive and beautiful user interfaces and experiences.",
-  },
-  {
-    icon: Globe,
-    title: "Digital Strategy",
-    description: "Helping businesses grow their digital presence and reach.",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const AboutSection = () => {
+  const { t } = useLanguage();
+
+  const services = [
+    {
+      icon: Code,
+      title: t.about.webDev,
+      description: t.about.webDevDesc,
+    },
+    {
+      icon: Smartphone,
+      title: t.about.appDev,
+      description: t.about.appDevDesc,
+    },
+    {
+      icon: Palette,
+      title: t.about.uiux,
+      description: t.about.uiuxDesc,
+    },
+    {
+      icon: Globe,
+      title: t.about.digital,
+      description: t.about.digitalDesc,
+    },
+  ];
+
   return (
     <section className="animate-fade-in">
-      <h2 className="section-title">About Me</h2>
+      <h2 className="section-title">{t.about.title}</h2>
       <div className="section-underline" />
 
       <p className="text-muted-foreground mb-8 leading-relaxed">
-        I'm a passionate Software Developer with expertise in creating modern web and mobile applications. 
-        With years of experience in the industry, I've helped numerous clients bring their ideas to life 
-        through clean code and intuitive design. I believe in continuous learning and staying up-to-date 
-        with the latest technologies.
+        {t.about.description}
       </p>
 
-      <h3 className="text-xl font-semibold mb-6">What I Do</h3>
+      <h3 className="text-xl font-semibold mb-6">{t.about.whatIDo}</h3>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {services.map((service) => (

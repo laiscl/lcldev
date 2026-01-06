@@ -1,3 +1,5 @@
+import { useLanguage } from "@/contexts/LanguageContext";
+
 const posts = [
   {
     id: 1,
@@ -26,9 +28,11 @@ const posts = [
 ];
 
 const BlogSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="animate-fade-in">
-      <h2 className="section-title">Blog</h2>
+      <h2 className="section-title">{t.blog.title}</h2>
       <div className="section-underline" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

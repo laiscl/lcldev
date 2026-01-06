@@ -6,9 +6,11 @@ import ResumeSection from "@/components/ResumeSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import BlogSection from "@/components/BlogSection";
 import ContactSection from "@/components/ContactSection";
+import LanguageSelector from "@/components/LanguageSelector";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 import avatarImg from "@/assets/avatar.png";
 
-const Index = () => {
+const PortfolioContent = () => {
   const [activeSection, setActiveSection] = useState("Portfolio");
 
   const renderSection = () => {
@@ -33,22 +35,27 @@ const Index = () => {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6">
         {/* Sidebar */}
         <Sidebar
-          name="Seu Nome"
+          name="Laís Costa"
           role="Software Developer"
-          email="seuemail@email.com"
-          phone="+55 11 99999-9999"
-          location="São Paulo, Brasil"
+          email="lais.cl@outlook.com"
+          phone="+55 13 99153-8050"
+          location="Santos, Brasil"
           avatarUrl={avatarImg}
         />
 
         {/* Main Content */}
         <main className="flex-1 content-card animate-fade-in">
-          {/* Navigation */}
-          <div className="flex justify-end mb-8">
-            <Navigation 
-              activeSection={activeSection} 
-              onSectionChange={setActiveSection} 
-            />
+          {/* Header with Navigation and Language Selector */}
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+            <div className="order-2 sm:order-1">
+              <Navigation 
+                activeSection={activeSection} 
+                onSectionChange={setActiveSection} 
+              />
+            </div>
+            <div className="order-1 sm:order-2">
+              <LanguageSelector />
+            </div>
           </div>
 
           {/* Content */}
@@ -56,6 +63,14 @@ const Index = () => {
         </main>
       </div>
     </div>
+  );
+};
+
+const Index = () => {
+  return (
+    <LanguageProvider>
+      <PortfolioContent />
+    </LanguageProvider>
   );
 };
 

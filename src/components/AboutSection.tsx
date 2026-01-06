@@ -1,5 +1,6 @@
 import { Code, Palette, Smartphone, Globe } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SkillsSection from "./SkillsSection";
 
 const AboutSection = () => {
   const { t } = useLanguage();
@@ -52,6 +53,9 @@ const AboutSection = () => {
           </div>
         ))}
       </div>
+
+      {/* Skills Section */}
+      <SkillsSection />
     </section>
   );
 };

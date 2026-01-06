@@ -32,14 +32,14 @@ const SkillsSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="mt-10 animate-fade-in">
-      <h3 className="text-xl font-semibold mb-6 text-primary">{t.skillsSection.title}</h3>
+    <section className="mt-12 animate-fade-in">
+      <h3 className="text-xl font-semibold mb-6">{t.skillsSection.title}</h3>
       
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap gap-6">
         {skills.map((skill) => (
           <div
             key={skill.name}
-            className={`group relative w-20 h-20 rounded-2xl bg-gradient-to-br ${skill.color} border border-border/50 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:border-primary/50 cursor-pointer`}
+            className={`group relative w-24 h-24 rounded-2xl bg-gradient-to-br ${skill.color} border border-border/50 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:border-primary/50 cursor-pointer`}
           >
             <img 
               src={skill.icon} 

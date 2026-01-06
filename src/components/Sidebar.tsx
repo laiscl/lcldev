@@ -1,7 +1,6 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Linkedin, Github, Twitter } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import SkillsSection from "./SkillsSection";
 
 interface SidebarProps {
   name: string;
@@ -86,9 +85,6 @@ const Sidebar = ({ name, role, email, phone, location, avatarUrl }: SidebarProps
           <Twitter className="w-4 h-4" />
         </a>
       </div>
-
-      {/* Skills Section */}
-      <SkillsSection />
     </aside>
   );
 };

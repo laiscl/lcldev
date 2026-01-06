@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ContactSection = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -10,13 +12,12 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log("Form submitted:", formData);
   };
 
   return (
     <section className="animate-fade-in">
-      <h2 className="section-title">Contact</h2>
+      <h2 className="section-title">{t.contact.title}</h2>
       <div className="section-underline" />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -39,7 +40,7 @@ const ContactSection = () => {
           <div>
             <input
               type="text"
-              placeholder="Full Name"
+              placeholder={t.contact.name}
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               className="w-full px-4 py-3 bg-secondary rounded-xl border border-border focus:border-primary focus:outline-none transition-colors text-foreground placeholder:text-muted-foreground"
@@ -49,7 +50,7 @@ const ContactSection = () => {
           <div>
             <input
               type="email"
-              placeholder="Email Address"
+              placeholder={t.contact.email}
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               className="w-full px-4 py-3 bg-secondary rounded-xl border border-border focus:border-primary focus:outline-none transition-colors text-foreground placeholder:text-muted-foreground"
@@ -58,7 +59,7 @@ const ContactSection = () => {
           </div>
           <div>
             <textarea
-              placeholder="Your Message"
+              placeholder={t.contact.message}
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               rows={5}
@@ -71,7 +72,7 @@ const ContactSection = () => {
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-xl font-medium hover:bg-primary/90 transition-colors"
           >
             <Send className="w-4 h-4" />
-            Send Message
+            {t.contact.send}
           </button>
         </form>
       </div>

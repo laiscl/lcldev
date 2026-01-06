@@ -1,7 +1,6 @@
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
-
-const filters = ["All", "Applications", "Web development", "UI/UX"];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const projects = [
   {
@@ -55,7 +54,15 @@ const projects = [
 ];
 
 const PortfolioSection = () => {
+  const { t } = useLanguage();
   const [activeFilter, setActiveFilter] = useState("All");
+
+  const filters = [
+    { key: "All", label: t.portfolio.all },
+    { key: "Applications", label: t.portfolio.applications },
+    { key: "Web development", label: t.portfolio.webDev },
+    { key: "UI/UX", label: t.portfolio.uiux },
+  ];
 
   const filteredProjects = activeFilter === "All" 
     ? projects 
@@ -63,20 +70,20 @@ const PortfolioSection = () => {
 
   return (
     <section className="animate-fade-in">
-      <h2 className="section-title">Portfolio</h2>
+      <h2 className="section-title">{t.portfolio.title}</h2>
       <div className="section-underline" />
 
       {/* Filter Tabs */}
-      <div className="flex gap-6 mb-8">
+      <div className="flex flex-wrap gap-4 mb-8">
         {filters.map((filter) => (
           <button
-            key={filter}
-            onClick={() => setActiveFilter(filter)}
+            key={filter.key}
+            onClick={() => setActiveFilter(filter.key)}
             className={`filter-tab ${
-              activeFilter === filter ? "filter-tab-active" : ""
+              activeFilter === filter.key ? "filter-tab-active" : ""
             }`}
           >
-            {filter}
+            {filter.label}
           </button>
         ))}
       </div>

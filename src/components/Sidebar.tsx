@@ -1,5 +1,7 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Linkedin, Github, Twitter } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import SkillsSection from "./SkillsSection";
 
 interface SidebarProps {
   name: string;
@@ -11,6 +13,8 @@ interface SidebarProps {
 }
 
 const Sidebar = ({ name, role, email, phone, location, avatarUrl }: SidebarProps) => {
+  const { t } = useLanguage();
+
   return (
     <aside className="sidebar-card w-full lg:w-80 lg:sticky lg:top-8 h-fit animate-fade-in">
       {/* Avatar Section */}
@@ -41,7 +45,7 @@ const Sidebar = ({ name, role, email, phone, location, avatarUrl }: SidebarProps
             <Mail className="w-4 h-4" />
           </div>
           <div>
-            <p className="text-xs text-muted-foreground uppercase tracking-wide">Email</p>
+            <p className="text-xs text-muted-foreground uppercase tracking-wide">{t.sidebar.email}</p>
             <p className="text-sm text-foreground truncate">{email}</p>
           </div>
         </div>
@@ -51,7 +55,7 @@ const Sidebar = ({ name, role, email, phone, location, avatarUrl }: SidebarProps
             <Phone className="w-4 h-4" />
           </div>
           <div>
-            <p className="text-xs text-muted-foreground uppercase tracking-wide">Phone</p>
+            <p className="text-xs text-muted-foreground uppercase tracking-wide">{t.sidebar.phone}</p>
             <p className="text-sm text-foreground">{phone}</p>
           </div>
         </div>
@@ -61,7 +65,7 @@ const Sidebar = ({ name, role, email, phone, location, avatarUrl }: SidebarProps
             <MapPin className="w-4 h-4" />
           </div>
           <div>
-            <p className="text-xs text-muted-foreground uppercase tracking-wide">Location</p>
+            <p className="text-xs text-muted-foreground uppercase tracking-wide">{t.sidebar.location}</p>
             <p className="text-sm text-foreground">{location}</p>
           </div>
         </div>
@@ -82,6 +86,9 @@ const Sidebar = ({ name, role, email, phone, location, avatarUrl }: SidebarProps
           <Twitter className="w-4 h-4" />
         </a>
       </div>
+
+      {/* Skills Section */}
+      <SkillsSection />
     </aside>
   );
 };

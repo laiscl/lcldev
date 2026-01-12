@@ -2,9 +2,9 @@ import { useLanguage, Language } from "@/contexts/LanguageContext";
 import { Globe } from "lucide-react";
 
 const languages: { code: Language; label: string; flag: string }[] = [
-  { code: "pt", label: "Português", flag: "🇧🇷" },
   { code: "en", label: "English", flag: "🇺🇸" },
   { code: "es", label: "Español", flag: "🇪🇸" },
+  { code: "pt", label: "Português (BR)", flag: "🇧🇷" },
   { code: "ja", label: "日本語", flag: "🇯🇵" },
 ];
 

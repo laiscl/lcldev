@@ -19,7 +19,7 @@ const Sidebar = ({ name, role, email, phone, location, avatarUrl }: SidebarProps
       {/* Avatar Section */}
       <div className="flex flex-col items-center mb-6">
         <div className="relative mb-4">
-          <div className="w-32 h-32 rounded-2xl overflow-hidden bg-gradient-to-br from-muted to-secondary">
+          <div className="w-32 h-32 rounded-full overflow-hidden bg-gradient-to-br from-muted to-secondary">
             <img 
               src={avatarUrl} 
               alt={name}

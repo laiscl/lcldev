@@ -17,12 +17,12 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
   ];
 
   return (
-    <nav className="flex gap-2">
+    <nav className="flex flex-wrap gap-1 sm:gap-2">
       {sections.map((section) => (
         <button
           key={section.key}
           onClick={() => onSectionChange(section.key)}
-          className={`nav-link ${
+          className={`nav-link text-xs sm:text-sm px-2 sm:px-4 py-1.5 sm:py-2 ${
             activeSection === section.key ? "nav-link-active" : ""
           }`}
         >

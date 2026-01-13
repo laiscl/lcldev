@@ -1,34 +1,34 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const posts = [
-  {
-    id: 1,
-    title: "Building Modern React Applications",
-    excerpt: "Learn the best practices for building scalable React apps with TypeScript and modern tooling.",
-    date: "Dec 15, 2024",
-    category: "Development",
-    imageUrl: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=250&fit=crop",
-  },
-  {
-    id: 2,
-    title: "UI/UX Design Principles",
-    excerpt: "Essential design principles every developer should know to create better user experiences.",
-    date: "Dec 10, 2024",
-    category: "Design",
-    imageUrl: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=250&fit=crop",
-  },
-  {
-    id: 3,
-    title: "The Future of Web Development",
-    excerpt: "Exploring emerging technologies and trends that will shape the future of web development.",
-    date: "Dec 5, 2024",
-    category: "Technology",
-    imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop",
-  },
-];
-
 const BlogSection = () => {
   const { t } = useLanguage();
+
+  const posts = [
+    {
+      id: 1,
+      title: t.blog.post1Title,
+      excerpt: t.blog.post1Excerpt,
+      date: "Dec 15, 2024",
+      category: t.blog.post1Category,
+      imageUrl: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=250&fit=crop",
+    },
+    {
+      id: 2,
+      title: t.blog.post2Title,
+      excerpt: t.blog.post2Excerpt,
+      date: "Dec 10, 2024",
+      category: t.blog.post2Category,
+      imageUrl: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=250&fit=crop",
+    },
+    {
+      id: 3,
+      title: t.blog.post3Title,
+      excerpt: t.blog.post3Excerpt,
+      date: "Dec 5, 2024",
+      category: t.blog.post3Category,
+      imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop",
+    },
+  ];
 
   return (
     <section className="animate-fade-in">

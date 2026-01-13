@@ -44,6 +44,15 @@ interface Translations {
   };
   blog: {
     title: string;
+    post1Title: string;
+    post1Excerpt: string;
+    post1Category: string;
+    post2Title: string;
+    post2Excerpt: string;
+    post2Category: string;
+    post3Title: string;
+    post3Excerpt: string;
+    post3Category: string;
   };
   contact: {
     title: string;
@@ -100,6 +109,15 @@ const translations: Record<Language, Translations> = {
     },
     blog: {
       title: "Blog",
+      post1Title: "Construindo Aplicações React Modernas",
+      post1Excerpt: "Aprenda as melhores práticas para criar aplicações React escaláveis com TypeScript e ferramentas modernas.",
+      post1Category: "Desenvolvimento",
+      post2Title: "Princípios de Design UI/UX",
+      post2Excerpt: "Princípios essenciais de design que todo desenvolvedor deve conhecer para criar melhores experiências.",
+      post2Category: "Design",
+      post3Title: "O Futuro do Desenvolvimento Web",
+      post3Excerpt: "Explorando tecnologias e tendências emergentes que moldarão o futuro do desenvolvimento web.",
+      post3Category: "Tecnologia",
     },
     contact: {
       title: "Contato",
@@ -154,6 +172,15 @@ const translations: Record<Language, Translations> = {
     },
     blog: {
       title: "Blog",
+      post1Title: "Building Modern React Applications",
+      post1Excerpt: "Learn the best practices for building scalable React apps with TypeScript and modern tooling.",
+      post1Category: "Development",
+      post2Title: "UI/UX Design Principles",
+      post2Excerpt: "Essential design principles every developer should know to create better user experiences.",
+      post2Category: "Design",
+      post3Title: "The Future of Web Development",
+      post3Excerpt: "Exploring emerging technologies and trends that will shape the future of web development.",
+      post3Category: "Technology",
     },
     contact: {
       title: "Contact",
@@ -208,6 +235,15 @@ const translations: Record<Language, Translations> = {
     },
     blog: {
       title: "Blog",
+      post1Title: "Construyendo Aplicaciones React Modernas",
+      post1Excerpt: "Aprende las mejores prácticas para crear aplicaciones React escalables con TypeScript y herramientas modernas.",
+      post1Category: "Desarrollo",
+      post2Title: "Principios de Diseño UI/UX",
+      post2Excerpt: "Principios esenciales de diseño que todo desarrollador debe conocer para crear mejores experiencias.",
+      post2Category: "Diseño",
+      post3Title: "El Futuro del Desarrollo Web",
+      post3Excerpt: "Explorando tecnologías y tendencias emergentes que darán forma al futuro del desarrollo web.",
+      post3Category: "Tecnología",
     },
     contact: {
       title: "Contacto",
@@ -262,6 +298,15 @@ const translations: Record<Language, Translations> = {
     },
     blog: {
       title: "ブログ",
+      post1Title: "モダンなReactアプリケーションの構築",
+      post1Excerpt: "TypeScriptとモダンなツールを使用してスケーラブルなReactアプリを構築するためのベストプラクティスを学びます。",
+      post1Category: "開発",
+      post2Title: "UI/UXデザインの原則",
+      post2Excerpt: "すべての開発者が知っておくべき、より良いユーザー体験を作成するための重要なデザイン原則。",
+      post2Category: "デザイン",
+      post3Title: "ウェブ開発の未来",
+      post3Excerpt: "ウェブ開発の未来を形作る新興技術とトレンドを探求します。",
+      post3Category: "テクノロジー",
     },
     contact: {
       title: "お問い合わせ",

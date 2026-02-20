@@ -4,27 +4,30 @@ const skills = [
   {
     name: "React",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    color: "from-cyan-500/20 to-blue-500/20",
   },
   {
     name: "TypeScript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-    color: "from-blue-500/20 to-blue-600/20",
   },
   {
     name: "HTML5",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-    color: "from-orange-500/20 to-red-500/20",
   },
   {
     name: "CSS3",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    color: "from-blue-400/20 to-blue-600/20",
   },
   {
     name: "C#",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
-    color: "from-purple-500/20 to-violet-600/20",
+  },
+  {
+    name: "Python",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  },
+  {
+    name: "SQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
   },
 ];
 
@@ -39,7 +42,7 @@ const SkillsSection = () => {
         {skills.map((skill) => (
           <div
             key={skill.name}
-            className={`group relative w-24 h-24 rounded-2xl bg-gradient-to-br ${skill.color} border border-border/50 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:border-primary/50 cursor-pointer`}
+            className="group relative w-24 h-24 rounded-2xl bg-primary/10 border border-border/50 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:border-primary/50 hover:bg-primary/20 cursor-pointer"
           >
             <img 
               src={skill.icon} 

@@ -39,7 +39,7 @@ const Sidebar = ({ name, role, email, phone, location, avatarUrl }: SidebarProps
           <div className="status-dot" />
         </div>
         <h1 className="text-xl font-bold text-foreground">{name}</h1>
-        <span className="mt-2 px-4 py-1.5 bg-secondary rounded-lg text-sm text-muted-foreground">
+        <span className="mt-2 px-4 py-1.5 bg-primary/15 rounded-lg text-sm text-primary font-medium">
           {role}
         </span>
       </div>
@@ -50,7 +50,7 @@ const Sidebar = ({ name, role, email, phone, location, avatarUrl }: SidebarProps
       {/* Contact Info */}
       <div className="space-y-1">
         <div className="contact-item">
-          <div className="contact-icon">
+          <div className="contact-icon !bg-primary/15 !text-primary">
             <Mail className="w-4 h-4" />
           </div>
           <div>
@@ -60,7 +60,7 @@ const Sidebar = ({ name, role, email, phone, location, avatarUrl }: SidebarProps
         </div>
 
         <div className="contact-item">
-          <div className="contact-icon">
+          <div className="contact-icon !bg-primary/15 !text-primary">
             <Phone className="w-4 h-4" />
           </div>
           <div>
@@ -70,7 +70,7 @@ const Sidebar = ({ name, role, email, phone, location, avatarUrl }: SidebarProps
         </div>
 
         <div className="contact-item">
-          <div className="contact-icon">
+          <div className="contact-icon !bg-primary/15 !text-primary">
             <MapPin className="w-4 h-4" />
           </div>
           <div>

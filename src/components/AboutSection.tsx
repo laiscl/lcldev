@@ -43,7 +43,7 @@ const AboutSection = () => {
         {services.map((service) => (
           <div 
             key={service.title}
-            className="p-6 bg-secondary/50 rounded-xl border border-border/50 hover:border-primary/30 transition-colors duration-300"
+            className="p-6 bg-secondary/50 rounded-xl border border-border/50 hover:border-primary/50 hover:bg-secondary/80 transition-all duration-300 cursor-pointer"
           >
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
               <service.icon className="w-6 h-6 text-primary" />

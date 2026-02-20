@@ -4,42 +4,42 @@
 
 @layer base {
   :root {
-    --background: 0 0% 9%;
+    --background: 0 0% 6%;
     --foreground: 0 0% 95%;
 
-    --card: 0 0% 13%;
+    --card: 0 0% 11%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 13%;
+    --popover: 0 0% 11%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 45 96% 53%;
+    --primary-foreground: 0 0% 10%;
 
-    --secondary: 0 0% 18%;
+    --secondary: 0 0% 14%;
     --secondary-foreground: 0 0% 95%;
 
-    --muted: 0 0% 20%;
+    --muted: 0 0% 16%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 217 91% 60%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 45 96% 53%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 217 91% 60%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 45 96% 53%;
 
     --radius: 1rem;
 
     /* Custom portfolio tokens */
-    --sidebar-bg: 0 0% 11%;
-    --content-bg: 0 0% 15%;
-    --card-hover: 0 0% 16%;
+    --sidebar-bg: 0 0% 8%;
+    --content-bg: 0 0% 10%;
+    --card-hover: 0 0% 14%;
     --status-online: 142 76% 46%;
-    --nav-active: 217 91% 60%;
+    --nav-active: 45 96% 53%;
   }
 }
 

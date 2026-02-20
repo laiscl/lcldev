@@ -42,7 +42,7 @@ const SkillsSection = () => {
         {skills.map((skill) => (
           <div
             key={skill.name}
-            className="group relative w-24 h-24 rounded-2xl bg-primary/10 border border-border/50 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:border-primary/50 hover:bg-primary/20 cursor-pointer"
+            className="group relative w-24 h-24 rounded-2xl border border-border/50 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:border-primary/50 cursor-pointer"
           >
             <img 
               src={skill.icon} 

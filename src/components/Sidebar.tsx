@@ -37,7 +37,7 @@ const Sidebar = ({ name, role, email, phone, location, avatarUrl }: SidebarProps
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute bottom-1 right-1 w-4 h-4 rounded-full bg-[hsl(var(--status-online))] border-[3px] border-[hsl(var(--sidebar-bg))]" />
+            <div className="absolute bottom-2 right-2 w-4 h-4 rounded-full bg-[hsl(var(--status-online))] border-[3px] border-[hsl(var(--sidebar-bg))]" />
           </div>
         </div>
         <h1 className="text-xl font-bold text-foreground">{name}</h1>

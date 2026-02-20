@@ -29,7 +29,7 @@ const Sidebar = ({ name, role, email, phone, location, avatarUrl }: SidebarProps
       {/* Avatar Section */}
       <div className="flex flex-col items-center mb-6">
         <div className="relative mb-4">
-          <div className="relative w-36 h-36 rounded-full border-[3px] border-primary/60 p-1">
+          <div className="w-36 h-36 rounded-full border-[3px] border-primary/60 p-1">
             <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-muted to-secondary">
               <img 
                 src={avatarUrl} 
@@ -37,8 +37,8 @@ const Sidebar = ({ name, role, email, phone, location, avatarUrl }: SidebarProps
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute bottom-2 right-2 w-4 h-4 rounded-full bg-[hsl(var(--status-online))] border-[3px] border-[hsl(var(--sidebar-bg))]" />
           </div>
+          <div className="status-dot" />
         </div>
         <h1 className="text-xl font-bold text-foreground">{name}</h1>
         <span className="mt-2 px-4 py-1.5 bg-primary/15 rounded-lg text-sm text-primary font-medium">

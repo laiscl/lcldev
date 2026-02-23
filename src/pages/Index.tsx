@@ -4,7 +4,6 @@ import Navigation from "@/components/Navigation";
 import AboutSection from "@/components/AboutSection";
 import ResumeSection from "@/components/ResumeSection";
 import PortfolioSection from "@/components/PortfolioSection";
-import BlogSection from "@/components/BlogSection";
 import ContactSection from "@/components/ContactSection";
 import LanguageSelector from "@/components/LanguageSelector";
 import { LanguageProvider } from "@/contexts/LanguageContext";
@@ -21,8 +20,6 @@ const PortfolioContent = () => {
         return <ResumeSection />;
       case "Portfolio":
         return <PortfolioSection />;
-      case "Blog":
-        return <BlogSection />;
       case "Contact":
         return <ContactSection />;
       default:

@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, FileDown } from "lucide-react";
 import { Linkedin, Github } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -84,6 +84,16 @@ const Sidebar = ({ name, role, email, phone, location, avatarUrl }: SidebarProps
 
       {/* Divider */}
       <div className="w-full h-px bg-border my-6" />
+
+      <a
+        href="/cv.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center gap-2 w-full px-4 py-3 mb-6 bg-primary/15 text-primary rounded-xl font-medium hover:bg-primary/20 transition-colors"
+      >
+        <FileDown className="w-4 h-4" />
+        Download CV (PDF)
+      </a>
 
       {/* Social Links */}
       <div className="flex justify-center gap-3">

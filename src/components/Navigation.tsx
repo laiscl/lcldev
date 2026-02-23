@@ -12,7 +12,6 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
     { key: "About", label: t.nav.about },
     { key: "Resume", label: t.nav.resume },
     { key: "Portfolio", label: t.nav.portfolio },
-    { key: "Blog", label: t.nav.blog },
     { key: "Contact", label: t.nav.contact },
   ];
 

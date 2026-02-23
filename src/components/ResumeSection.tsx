@@ -1,4 +1,4 @@
-import { Briefcase, GraduationCap } from "lucide-react";
+import { Briefcase, GraduationCap, Languages, Code2 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const ResumeSection = () => {
@@ -6,39 +6,58 @@ const ResumeSection = () => {
 
   const experiences = [
     {
-      period: `2022 - ${t.resume.present}`,
-      title: "Senior Software Developer",
-      company: "Tech Company",
-      description: "Leading development of enterprise web applications using React and Node.js.",
+      period: `06/2025 - ${t.resume.present}`,
+      title: "Front-End Developer",
+      company: "China Link",
+      description:
+        "Desenvolvimento e evolucao de interfaces web com foco em experiencia do usuario, usabilidade e performance.",
     },
     {
-      period: "2020 - 2022",
-      title: "Full Stack Developer",
-      company: "Startup Inc",
-      description: "Built and maintained multiple client projects from concept to deployment.",
+      period: "10/2024 - 06/2025",
+      title: "DevOps",
+      company: "China Link",
+      description:
+        "Apoio em automacao, organizacao de processos e integracao entre desenvolvimento e operacoes.",
     },
     {
-      period: "2018 - 2020",
-      title: "Junior Developer",
-      company: "Digital Agency",
-      description: "Started career developing responsive websites and learning best practices.",
+      period: "06/2024 - 10/2024",
+      title: "TI",
+      company: "China Link",
+      description:
+        "Suporte tecnico, organizacao de demandas internas e apoio a infraestrutura de tecnologia.",
+    },
+    {
+      period: "2013 - 2024",
+      title: "Consultora Comercial de Seguros",
+      company: "Corretora de Seguros",
+      description:
+        "Atendimento consultivo, relacionamento com clientes e apoio na escolha das melhores solucoes de seguro.",
     },
   ];
 
   const education = [
     {
       period: "2014 - 2018",
-      title: "Bachelor in Computer Science",
-      institution: "University of Technology",
-      description: "Graduated with honors. Specialized in software engineering and web technologies.",
+      title: "Bacharel em Sistemas de Informacao",
+      institution: "Universidade Santa Cecilia",
+      description:
+        "Formacao voltada para tecnologia, desenvolvimento de software e gestao de sistemas de informacao.",
+    },
+    {
+      period: "Certificacao",
+      title: "Green Belt Six Sigma",
+      institution: "Six Sigma",
+      description:
+        "Formacao em melhoria continua, analise de processos e resolucao estruturada de problemas.",
     },
   ];
 
-  const skills = [
-    { name: "React", level: 95 },
-    { name: "TypeScript", level: 90 },
-    { name: "HTML/CSS", level: 95 },
-    { name: "C#", level: 80 },
+  const skills = ["React", "TypeScript", "HTML/CSS", "C#"];
+
+  const languages = [
+    { name: "Ingles", level: "Avancado" },
+    { name: "Japones", level: "Intermediario" },
+    { name: "Espanhol", level: "Basico" },
   ];
 
   return (
@@ -87,25 +106,41 @@ const ResumeSection = () => {
               </div>
             ))}
           </div>
+
+          <div className="flex items-center gap-3 mt-10 mb-6">
+            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+              <Languages className="w-5 h-5 text-primary" />
+            </div>
+            <h3 className="text-xl font-semibold">Idiomas</h3>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {languages.map((language) => (
+              <span
+                key={language.name}
+                className="text-sm px-3 py-1.5 rounded-lg border border-border bg-background text-foreground"
+              >
+                {language.name} - {language.level}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
 
       {/* Skills */}
-      <h3 className="text-xl font-semibold mb-6">{t.resume.skills}</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="flex items-center gap-3 mt-10 mb-6">
+        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+          <Code2 className="w-5 h-5 text-primary" />
+        </div>
+        <h3 className="text-xl font-semibold">{t.resume.skills}</h3>
+      </div>
+      <div className="flex flex-wrap gap-2">
         {skills.map((skill) => (
-          <div key={skill.name}>
-            <div className="flex justify-between mb-2">
-              <span className="text-sm font-medium">{skill.name}</span>
-              <span className="text-sm text-muted-foreground">{skill.level}%</span>
-            </div>
-            <div className="h-2 bg-secondary rounded-full overflow-hidden">
-              <div 
-                className="h-full bg-primary rounded-full transition-all duration-500"
-                style={{ width: `${skill.level}%` }}
-              />
-            </div>
-          </div>
+          <span
+            key={skill}
+            className="text-sm px-3 py-1.5 rounded-lg border border-border bg-background text-foreground"
+          >
+            {skill}
+          </span>
         ))}
       </div>
     </section>

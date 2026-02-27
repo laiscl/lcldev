@@ -10,7 +10,7 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import avatarImg from "@/assets/avatar.png";
 
 const PortfolioContent = () => {
-  const [activeSection, setActiveSection] = useState("Portfolio");
+  const [activeSection, setActiveSection] = useState("About");
 
   const renderSection = () => {
     switch (activeSection) {
@@ -23,7 +23,7 @@ const PortfolioContent = () => {
       case "Contact":
         return <ContactSection />;
       default:
-        return <PortfolioSection />;
+        return <AboutSection />;
     }
   };
 
@@ -33,7 +33,7 @@ const PortfolioContent = () => {
         {/* Sidebar */}
         <Sidebar
           name="Laís Costa"
-          role="Software Developer"
+          role="Front-End Developer"
           email="lais.cl@outlook.com"
           phone="+55 13 99153-8050"
           location="Santos, Brasil"

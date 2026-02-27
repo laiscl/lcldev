@@ -29,7 +29,7 @@ const Sidebar = ({ name, role, email, phone, location, avatarUrl }: SidebarProps
       {/* Avatar Section */}
       <div className="flex flex-col items-center mb-6">
         <div className="relative mb-4">
-          <div className="w-36 h-36 rounded-full border-[3px] border-primary/60 p-1">
+          <div className="avatar-glow w-36 h-36 rounded-full border-[3px] border-primary/60 p-1">
             <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-muted to-secondary">
               <img 
                 src={avatarUrl} 
@@ -86,9 +86,8 @@ const Sidebar = ({ name, role, email, phone, location, avatarUrl }: SidebarProps
       <div className="w-full h-px bg-border my-6" />
 
       <a
-        href="/cv.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
+        href={`${import.meta.env.BASE_URL}CV%20-%20LCL.pdf`}
+        download="CV - LCL.pdf"
         className="flex items-center justify-center gap-2 w-full px-4 py-3 mb-6 bg-primary/15 text-primary rounded-xl font-medium hover:bg-primary/20 transition-colors"
       >
         <FileDown className="w-4 h-4" />
@@ -97,10 +96,10 @@ const Sidebar = ({ name, role, email, phone, location, avatarUrl }: SidebarProps
 
       {/* Social Links */}
       <div className="flex justify-center gap-3">
-        <a href="#" className="social-icon" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/lais-costa/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
           <Linkedin className="w-4 h-4" />
         </a>
-        <a href="#" className="social-icon" aria-label="GitHub">
+        <a href="https://github.com/laiscl" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="GitHub">
           <Github className="w-4 h-4" />
         </a>
         <a href="https://wa.me/5513991538050" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="WhatsApp">

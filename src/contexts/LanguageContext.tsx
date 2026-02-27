@@ -82,7 +82,7 @@ const translations: Record<Language, Translations> = {
     },
     about: {
       title: "Sobre Mim",
-      description: "Desenvolvedora Front-End especializada em React e TypeScript, com foco na construcao de aplicacoes escalaveis e performaticas. Experiencia na criacao de sistemas web e mobile do zero, atuando com integracao de APIs e visao de arquitetura. Combino dominio tecnico e entendimento de processos de negocio para desenvolver solucoes eficientes e orientadas a produto.",
+      description: "Desenvolvedora Front-End com experiencia em React, TypeScript, Tailwind e Bootstrap na construcao de aplicacoes web e mobile. Atuo no desenvolvimento de sistemas do zero, integracao com APIs e definicao de arquitetura de componentes, com foco em performance, escalabilidade e experiencia do usuario. Base em backend com Python e SQL e forte vivencia em automacao e processos.",
       whatIDo: "O Que Eu Faço",
       webDev: "Desenvolvimento Web",
       webDevDesc: "Criando aplicações web responsivas e performáticas usando tecnologias modernas.",
@@ -90,8 +90,8 @@ const translations: Record<Language, Translations> = {
       appDevDesc: "Construindo aplicações mobile multiplataforma com performance nativa.",
       uiux: "Design UI/UX",
       uiuxDesc: "Projetando interfaces de usuário intuitivas e bonitas.",
-      digital: "Estratégia Digital",
-      digitalDesc: "Ajudando empresas a crescer sua presença digital.",
+      digital: "Automação e Inovação",
+      digitalDesc: "Otimizando processos com automacoes inteligentes e soluções inovadoras para ganho de eficiência.",
     },
     resume: {
       title: "Currículo",
@@ -153,8 +153,8 @@ const translations: Record<Language, Translations> = {
       appDevDesc: "Building cross-platform mobile applications with native performance.",
       uiux: "UI/UX Design",
       uiuxDesc: "Designing intuitive and beautiful user interfaces and experiences.",
-      digital: "Digital Strategy",
-      digitalDesc: "Helping businesses grow their digital presence and reach.",
+      digital: "Process Automation",
+      digitalDesc: "Optimizing operations with smart automation and innovation-driven process improvements.",
     },
     resume: {
       title: "Resume",
@@ -216,8 +216,8 @@ const translations: Record<Language, Translations> = {
       appDevDesc: "Construyendo aplicaciones móviles multiplataforma con rendimiento nativo.",
       uiux: "Diseño UI/UX",
       uiuxDesc: "Diseñando interfaces de usuario intuitivas y hermosas.",
-      digital: "Estrategia Digital",
-      digitalDesc: "Ayudando a empresas a crecer su presencia digital.",
+      digital: "Automatizacion e Innovacion",
+      digitalDesc: "Optimizando procesos con automatizaciones inteligentes y soluciones innovadoras para mayor eficiencia.",
     },
     resume: {
       title: "Currículum",
@@ -279,8 +279,8 @@ const translations: Record<Language, Translations> = {
       appDevDesc: "ネイティブパフォーマンスのクロスプラットフォームモバイルアプリケーションを構築。",
       uiux: "UI/UXデザイン",
       uiuxDesc: "直感的で美しいユーザーインターフェースをデザイン。",
-      digital: "デジタル戦略",
-      digitalDesc: "企業のデジタルプレゼンス向上を支援。",
+      digital: "Purosesu Jidoka",
+      digitalDesc: "Sumaato na jidoka to inobeeshon de gyomu purosesu o kaizen shi, koritsuka o suishin.",
     },
     resume: {
       title: "履歴書",
@@ -348,4 +348,6 @@ export const useLanguage = () => {
 };
 
 export type { Language };
+
+
 

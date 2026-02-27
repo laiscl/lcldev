@@ -9,10 +9,42 @@ const ContactSection = () => {
     email: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/lais.cl@outlook.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: "Nova mensagem do portfolio",
+          _captcha: "false",
+          _template: "table",
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Erro no envio");
+      }
+
+      setSubmitStatus("success");
+      setFormData({ name: "", email: "", message: "" });
+    } catch {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -55,11 +87,22 @@ const ContactSection = () => {
           </div>
           <button
             type="submit"
+            disabled={isSubmitting}
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-xl font-medium hover:bg-primary/90 transition-colors"
           >
             <Send className="w-4 h-4" />
-            {t.contact.send}
+            {isSubmitting ? "Enviando..." : t.contact.send}
           </button>
+          {submitStatus === "success" && (
+            <p className="text-sm text-primary">
+              Mensagem enviada com sucesso. Vou receber no e-mail lais.cl@outlook.com.
+            </p>
+          )}
+          {submitStatus === "error" && (
+            <p className="text-sm text-destructive">
+              Nao foi possivel enviar agora. Tente novamente em instantes.
+            </p>
+          )}
         </form>
       </div>
     </section>

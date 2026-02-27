@@ -13,7 +13,7 @@
     --popover: 0 0% 11%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 85 35% 42%;
+    --primary: 210 75% 52%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 0 0% 14%;
@@ -22,7 +22,7 @@
     --muted: 0 0% 16%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 85 35% 42%;
+    --accent: 210 75% 52%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
@@ -30,7 +30,7 @@
 
     --border: 0 0% 18%;
     --input: 0 0% 18%;
-    --ring: 85 35% 42%;
+    --ring: 210 75% 52%;
 
     --radius: 1rem;
 
@@ -38,8 +38,8 @@
     --sidebar-bg: 0 0% 8%;
     --content-bg: 0 0% 10%;
     --card-hover: 0 0% 14%;
-    --status-online: 142 76% 46%;
-    --nav-active: 85 35% 42%;
+    --status-online: 200 90% 45%;
+    --nav-active: 210 75% 52%;
   }
 }
 

@@ -82,7 +82,7 @@ const translations: Record<Language, Translations> = {
     },
     about: {
       title: "Sobre Mim",
-      description: "Sou uma desenvolvedora de software apaixonada, com experiência em criar aplicações web e mobile modernas. Ao longo dos anos, ajudei diversos clientes a transformar suas ideias em realidade através de código limpo e design intuitivo. Acredito no aprendizado contínuo e em me manter atualizada com as últimas tecnologias.",
+      description: "Desenvolvedora Front-End especializada em React e TypeScript, com foco na construcao de aplicacoes escalaveis e performaticas. Experiencia na criacao de sistemas web e mobile do zero, atuando com integracao de APIs e visao de arquitetura. Combino dominio tecnico e entendimento de processos de negocio para desenvolver solucoes eficientes e orientadas a produto.",
       whatIDo: "O Que Eu Faço",
       webDev: "Desenvolvimento Web",
       webDevDesc: "Criando aplicações web responsivas e performáticas usando tecnologias modernas.",
@@ -348,3 +348,4 @@ export const useLanguage = () => {
 };
 
 export type { Language };
+

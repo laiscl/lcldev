@@ -1,55 +1,74 @@
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { BarChart3, Clock3, IdCard, Smartphone, Package, Network } from "lucide-react";
 
 const projects = [
   {
     id: 1,
-    title: "Finance App",
+    title: "Analytics",
     category: "Applications",
-    imageUrl: "https://cdn-icons-png.flaticon.com/512/2830/2830284.png",
-    bgColor: "bg-card",
+    description:
+      "Plataforma de dashboard com visualizacao estrategica de dados. Exibe KPIs, graficos de desempenho, metricas operacionais e indicadores financeiros em tempo real. Foco em tomada de decisao baseada em dados.",
+    icon: BarChart3,
+    bgColor: "bg-gradient-to-br from-blue-700 via-indigo-700 to-violet-700",
+    logoColor: "bg-white/15 text-blue-100",
     filter: "Applications",
   },
   {
     id: 2,
-    title: "E-commerce Platform",
-    category: "Web development",
-    imageUrl: "https://cdn-icons-png.flaticon.com/512/3081/3081559.png",
-    bgColor: "bg-gradient-to-br from-violet-600 to-purple-700",
-    filter: "Web development",
+    title: "Timetrack",
+    category: "Applications",
+    description:
+      "Sistema de controle de atividades e monitoramento de colaboradores, com foco em tempo de atendimento e cumprimento de SLA. Permite identificar atrasos, produtividade e performance da equipe em tempo real.",
+    icon: Clock3,
+    bgColor: "bg-gradient-to-br from-slate-800 to-blue-900",
+    logoColor: "bg-orange-500/20 text-orange-100",
+    filter: "Applications",
   },
   {
     id: 3,
-    title: "Social Connect",
+    title: "Intro Card Creator",
     category: "Applications",
-    imageUrl: "https://cdn-icons-png.flaticon.com/512/2504/2504903.png",
-    bgColor: "bg-gradient-to-br from-pink-500 to-rose-600",
+    description:
+      "Ferramenta para criacao automatizada de cartoes de clientes seguindo templates padronizados. Permite geracao individual ou em massa (via upload de dados), ideal para eventos corporativos.",
+    icon: IdCard,
+    bgColor: "bg-gradient-to-br from-sky-500 via-indigo-500 to-purple-500",
+    logoColor: "bg-white/20 text-indigo-50",
     filter: "Applications",
   },
   {
     id: 4,
-    title: "Task Manager",
-    category: "UI/UX",
-    imageUrl: "https://cdn-icons-png.flaticon.com/512/2387/2387635.png",
-    bgColor: "bg-gradient-to-br from-cyan-500 to-blue-600",
-    filter: "UI/UX",
+    title: "Canton Fair App",
+    category: "Applications",
+    description:
+      "Aplicativo mobile de suporte para clientes durante a Canton Fair. Oferece agenda, mapa do evento, organizacao de contatos, notificacoes e informacoes logisticas.",
+    icon: Smartphone,
+    bgColor: "bg-gradient-to-br from-red-700 via-red-600 to-rose-600",
+    logoColor: "bg-white/15 text-red-50",
+    filter: "Applications",
   },
   {
     id: 5,
-    title: "Food Delivery",
+    title: "Reports",
     category: "Applications",
-    imageUrl: "https://cdn-icons-png.flaticon.com/512/3081/3081918.png",
-    bgColor: "bg-gradient-to-br from-orange-500 to-red-600",
+    description:
+      "Sistema de acompanhamento de importacoes em tempo real. Exibe status logistico, timeline de processos, rastreamento de containers e atualizacoes operacionais.",
+    icon: Package,
+    bgColor: "bg-gradient-to-br from-slate-700 to-teal-800",
+    logoColor: "bg-cyan-300/20 text-cyan-100",
     filter: "Applications",
   },
   {
     id: 6,
-    title: "Dashboard Analytics",
-    category: "Web development",
-    imageUrl: "https://cdn-icons-png.flaticon.com/512/1828/1828919.png",
-    bgColor: "bg-gradient-to-br from-emerald-500 to-teal-600",
-    filter: "Web development",
+    title: "Prometheus",
+    category: "Applications",
+    description:
+      "Hub central que concentra todos os dados do cliente em um unico ambiente. Integra informacoes financeiras, logisticas, operacionais e analiticas, funcionando como portal principal da empresa.",
+    icon: Network,
+    bgColor: "bg-gradient-to-br from-slate-900 via-indigo-900 to-violet-900",
+    logoColor: "bg-violet-300/15 text-violet-100",
+    filter: "Applications",
   },
 ];
 
@@ -95,8 +114,10 @@ const PortfolioSection = () => {
             key={project.id}
             title={project.title}
             category={project.category}
-            imageUrl={project.imageUrl}
+            description={project.description}
+            icon={project.icon}
             bgColor={project.bgColor}
+            logoColor={project.logoColor}
           />
         ))}
       </div>
